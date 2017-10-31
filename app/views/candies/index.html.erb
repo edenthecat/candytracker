@@ -1,5 +1,15 @@
-<% @candies.each do |candy| %>
-  <h3> <%= link_to candy.name, candy_path(candy) %> </h3>
-  <p> <%= candy.category %></p>
-  <p> <%= "*" * candy.rating %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Candy Tracker</h1>
+      <%= link_to "Add a new candy", new_candy_path %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <% @candies.each do |candy| %>
+        <h3> <%= link_to candy.name, candy_path(candy) %> </h3>
+        <p> <%= candy.category %></p>
+        <p> <%= "*" * candy.rating %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
