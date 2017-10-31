@@ -1,0 +1,5 @@
+<% @candies.each do |candy| %>
+  <h3> <%= link_to candy.name, candy_path(candy) %> </h3>
+  <p> <%= candy.category %></p>
+  <p> <%= "*" * candy.rating %></p>
+<% end %>
