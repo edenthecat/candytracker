@@ -1,0 +1,7 @@
+<%= simple_form_for @candy do |f| %>
+  <%= f.input :name, input_html: { placeholder: "Cotton Candy" } %>
+  <%= f.input :category, as: :select, collection: Candy::CATEGORIES, include_blank: "Select a category" %>
+  <%= f.input :address %>
+  <%= f.input :rating, as: :select, collection: 1..5 %>
+  <%= f.submit %>
+<% end %>

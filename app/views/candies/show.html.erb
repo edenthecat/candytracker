@@ -1,0 +1,11 @@
+<h1><%= @candy.name %></h1>
+
+<p><%= @candy.category %></p>
+
+<p>Found at: <%= @candy.address %></p>
+
+<p>Taste Rating: <%= "*" * @candy.rating %></p>
+
+<%= link_to "Back", candies_path %>
+<%= link_to "Edit", edit_candy_path(@candy) %>
+<%= link_to "Delete", candy_path(@candy), method: :delete, data: { confirm: "Are you sure?"} %>
